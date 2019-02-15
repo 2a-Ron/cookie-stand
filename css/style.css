@@ -1,0 +1,38 @@
+html, body {
+    width: 100%;
+    height:100%;
+    background-color: #999999;
+    font-family: Geneva, Arial, Helvetica, san-serif; /*revisit these styles*/
+    color: #ffffff;
+  }
+  
+  :any-link {
+    color: rgb(34, 131, 160);
+    font-weight: normal;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-decoration: none;
+	}
+	
+	.center {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+  .mainImage {
+      border-style: solid;
+      border-color: #ffffff;
+      border-width: 2px;
+  }
+
+  .mainTable {
+    border-style: solid;
+    border-color : #ffffff;
+    border-width: 2px;
+	}
+  
