@@ -3,8 +3,33 @@ html, body {
     height:100%;
     background-color: #999999;
     font-family: Geneva, Arial, Helvetica, san-serif; /*revisit these styles*/
+    font-display: auto;
     color: #ffffff;
   }
+
+  h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 60px;
+    font-weight: bold;
+		color: #ffffff;
+		text-align: center;
+	}
+	
+	h2 {
+		font-family: 'Pacifico', cursive;
+    font-size: 40px;
+    font-weight: bold;
+    color: #ffffff;
+	}
+
+	h3, h4, h5, h6 {
+		font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+	}
+
+
   
   :any-link {
     color: rgb(34, 131, 160);
@@ -22,17 +47,28 @@ html, body {
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
+		justify-content: center;
+		align-content: center;
+		text-align: center;
 	}
-
-  .mainImage {
-      border-style: solid;
-      border-color: #ffffff;
-      border-width: 2px;
-  }
 
   .mainTable {
     border-style: solid;
     border-color : #ffffff;
     border-width: 2px;
+	}
+
+	.shell {
+		border: 2px;
+		border-color: #ffffff;
+		padding: 10px;
+		margin: 2px;
+	}
+
+	th {
+		border: 2px;
+		border-color: #000000;
+		padding: 10px;
+		margin: 2px;
 	}
   
