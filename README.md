@@ -132,6 +132,7 @@ A table to show the total amount of projected cookie needs at each location, wit
 
 Cookies Needed By Location Each Day
 Note: Scroll to the right to see the Daily Location Total column
+
 6:00am	7:00am	8:00am	9:00am	10:00am	11:00am	12:00pm	1:00pm	2:00pm	3:00pm	4:00pm	5:00pm	6:00pm	7:00pm	Daily Location Total
 1st and Pike															
 SeaTac Airport															
@@ -142,8 +143,8 @@ Totals
 
 User Stories (MVP)
 
-As a developer, I want to implement a constructor function, so that I can reuse code and eliminate much of the duplication in my JavaScript
-As a user, I want cookie sales data represented in tables rather than lists
+- As a developer, I want to implement a constructor function, so that I can reuse code and eliminate much of the duplication in my JavaScript
+- As a user, I want cookie sales data represented in tables rather than lists
 
 Technical Requirements
 
