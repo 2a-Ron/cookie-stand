@@ -13,29 +13,16 @@ var genRandomNum = function(minCust, maxCust) {
 };
 
 var calcRender = function(store) {
-  // debugger;
   for(var i = 0; i < operationHours.length; i++) {
     var rdmNumCust = genRandomNum(store.maxCust, store.minCust);
-    store.numCookieSold = Math.floor(store.avgCookieSale * rdmNumCust);
-    store.arrTotalCPH.push(store.numCookieSold);
+    store.numCookieSold = Math.floor(store.avgCookieSale * rdmNumCust);//equation gets total cookies per hour
+    store.arrTotalCPH.push(store.numCookieSold);//pushing total cookies sold per hour into the total cookies per hour array.
     store.totalSoldPerHour += store.numCookieSold;
     // continue with html render function
     var liEl = document.createElement('li');
     liEl.textContent = `${operationHours[i]}: ${store.arrTotalCPH[i]} cookies.`;
     console.log('test:', store.variable);
-    store.variable.appendChild(liEl);/*
-    var liEl = document.createElement('li');
-    liEl.textContent = `${operationHours[i]}: ${store.arrTotalCPH[i]} cookies.`;
-    seaTacUl.appendChild(liEl);
-    var liEl = document.createElement('li');
-    liEl.textContent = `${operationHours[i]}: ${store.arrTotalCPH[i]} cookies.`;
-    seaCenterUl.appendChild(liEl);
-    var liEl = document.createElement('li');
-    liEl.textContent = `${operationHours[i]}: ${store.arrTotalCPH[i]} cookies.`;
-    capHillUl.appendChild(liEl);
-    var liEl = document.createElement('li');
-    liEl.textContent = `${operationHours[i]}: ${store.arrTotalCPH[i]} cookies.`;
-    alkiUl.appendChild(liEl);*/
+    store.variable.appendChild(liEl);
   }
 };
 
@@ -50,86 +37,19 @@ var CookieStand = function (variable, location, minCust, maxCust, avgCookieSale,
   this.numCookieSold = numCookieSold;
   this.totalSoldPerHour = totalSoldPerHour;
 };
-
 // New Cookie Stand Instances
 var pike = new CookieStand(pikeUl, '1st and Pike', 23, 65, 6.3, [], 0, 0);
-
-///// objects
-/*
-var pike = {
-  variable: pikeUl,
-  location: '1st and Pike',
-  minCust: 23, // per hour
-  maxCust: 65, // per hour
-  avgCookieSale: 6.3, //per customer
-  arrTotalCPH: [],
-  numCookieSold: 0,
-  totalSoldPerHour: 0,
-};
-*/
-calcRender(pike);
-console.log('1st and Pike', pike);
-
 var seaTac = new CookieStand(seaTacUl, 'seaTac Airport', 3, 24, 1.2, [], 0, 0);
-/*
-var seaTac = {
-  variable: seaTacUl,
-  location: 'SeaTac Airport',
-  minCust: 3, // per hour
-  maxCust: 24, // per hour
-  avgCookieSale: 1.2, // per customer
-  arrTotalCPH: [],
-  numCookieSold: 0,
-  totalSoldPerHour: 0,
-};
-*/
-calcRender(seaTac);
-console.log('SeaTac Airport', seaTac);
-
 var seaCenter = new CookieStand(seaCenterUl, 'Seattle Center', 11, 38, 3.7, [], 0, 0);
-/*
-var seaCenter = {
-  variable: seaCenterUl,
-  location: 'Seattle Center',
-  minCust: 11, // per hour
-  maxCust: 38, // per hour
-  avgCookieSale: 3.7, // per customer
-  arrTotalCPH: [],
-  numCookieSold: 0,
-  totalSoldPerHour: 0,
-};
-*/
-calcRender(seaCenter);
-console.log('Seattle Center', seaCenter);
-
 var capHill = new CookieStand(capHillUl, 'Capitol Hill', 20, 38, 2.3, [], 0, 0);
-/*
-var capHill = {
-  variable: capHillUl,
-  location: 'Capitol Hill',
-  minCust: 20, // per hour
-  maxCust: 38, // per hour
-  avgCookieSale: 2.3, // per customer
-  arrTotalCPH: [],
-  numCookieSold: 0,
-  totalSoldPerHour: 0,
-};
-*/
-calcRender(capHill);
-console.log('Capitol Hill', capHill);
-
 var alki = new CookieStand(alkiUl, 'Alki', 2, 16, 4.6, [], 0, 0);
-/*
-var alki = {
-  variable: alkiUl,
-  location: 'Alki',
-  minCust: 2, // per hour
-  maxCust: 16, // per hour
-  avgCookieSale: 4.6, // per customer
-  arrTotalCPH: [],
-  numCookieSold: 0,
-  totalSoldPerHour: 0,
-};
-*/
+calcRender(pike);
+calcRender(seaTac);
+calcRender(seaCenter);
+calcRender(capHill);
 calcRender(alki);
+console.log('1st and Pike', pike);
+console.log('SeaTac Airport', seaTac);
+console.log('Seattle Center', seaCenter);
+console.log('Capitol Hill', capHill);
 console.log('Alki Beach', alki);
