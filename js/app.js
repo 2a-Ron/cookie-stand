@@ -38,7 +38,24 @@ var calcRender = function(store) {
     alkiUl.appendChild(liEl);*/
   }
 };
+
+///// Constructor Function
+var CookieStand = function (variable, location, minCust, maxCust, avgCookieSale, arrTotalCPH, numCookieSold, totalSoldPerHour) {
+  this.variable = variable;
+  this.location = location;
+  this.minCust = minCust;
+  this.maxCust = maxCust;
+  this.avgCookieSale = avgCookieSale;
+  this.arrTotalCPH = arrTotalCPH;
+  this.numCookieSold = numCookieSold;
+  this.totalSoldPerHour = totalSoldPerHour;
+};
+
+// New Cookie Stand Instances
+var pike = new CookieStand(pikeUl, '1st and Pike', 23, 65, 6.3, [], 0, 0);
+
 ///// objects
+/*
 var pike = {
   variable: pikeUl,
   location: '1st and Pike',
@@ -49,10 +66,12 @@ var pike = {
   numCookieSold: 0,
   totalSoldPerHour: 0,
 };
-
+*/
 calcRender(pike);
 console.log('1st and Pike', pike);
 
+var seaTac = new CookieStand(seaTacUl, 'seaTac Airport', 3, 24, 1.2, [], 0, 0);
+/*
 var seaTac = {
   variable: seaTacUl,
   location: 'SeaTac Airport',
@@ -63,10 +82,12 @@ var seaTac = {
   numCookieSold: 0,
   totalSoldPerHour: 0,
 };
-
+*/
 calcRender(seaTac);
 console.log('SeaTac Airport', seaTac);
 
+var seaCenter = new CookieStand(seaCenterUl, 'Seattle Center', 11, 38, 3.7, [], 0, 0);
+/*
 var seaCenter = {
   variable: seaCenterUl,
   location: 'Seattle Center',
@@ -77,10 +98,12 @@ var seaCenter = {
   numCookieSold: 0,
   totalSoldPerHour: 0,
 };
-
+*/
 calcRender(seaCenter);
 console.log('Seattle Center', seaCenter);
 
+var capHill = new CookieStand(capHillUl, 'Capitol Hill', 20, 38, 2.3, [], 0, 0);
+/*
 var capHill = {
   variable: capHillUl,
   location: 'Capitol Hill',
@@ -91,10 +114,12 @@ var capHill = {
   numCookieSold: 0,
   totalSoldPerHour: 0,
 };
-
+*/
 calcRender(capHill);
 console.log('Capitol Hill', capHill);
 
+var alki = new CookieStand(alkiUl, 'Alki', 2, 16, 4.6, [], 0, 0);
+/*
 var alki = {
   variable: alkiUl,
   location: 'Alki',
@@ -105,6 +130,6 @@ var alki = {
   numCookieSold: 0,
   totalSoldPerHour: 0,
 };
-
+*/
 calcRender(alki);
 console.log('Alki Beach', alki);
