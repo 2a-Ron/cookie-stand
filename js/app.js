@@ -25,7 +25,6 @@ var calcRender = function(store) {
     store.variable.appendChild(liEl);
   }
 };
-
 ///// Constructor Function
 var CookieStand = function (variable, location, minCust, maxCust, avgCookieSale, arrTotalCPH, numCookieSold, totalSoldPerHour) {
   this.variable = variable;
