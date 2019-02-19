@@ -12,19 +12,36 @@ var genRandomNum = function(minCust, maxCust) {
   return Math.floor(Math.random() * (maxCust - minCust)) + minCust;
 };
 
+var getGrandTotal = function(acc, val) { // if the accumulator isn't defined it defaults to the first item in the array
+  console.log('test acc: ', acc);
+  return acc + val; // returns the current accumulator plus the value
+};
+
 var calcRender = function(store) {
   for(var i = 0; i < operationHours.length; i++) {
     var rdmNumCust = genRandomNum(store.maxCust, store.minCust);
-    store.numCookieSold = Math.floor(store.avgCookieSale * rdmNumCust);//equation gets total cookies per hour
-    store.arrTotalCPH.push(store.numCookieSold);//pushing total cookies sold per hour into the total cookies per hour array.
+    store.numCookieSold = Math.floor(store.avgCookieSale * rdmNumCust); // equation gets total cookies per hour
+    store.arrTotalCPH.push(store.numCookieSold); // pushing total cookies sold per hour into the total cookies per hour array.
     store.totalSoldPerHour += store.numCookieSold;
+    var answer = store.arrTotalCPH.reduce(getGrandTotal); // reducing total cookies per hour array and getting the sum
+    console.log('TEST REDUCE: ', answer);
     // continue with html render function
     var liEl = document.createElement('li');
-    liEl.textContent = `${operationHours[i]}: ${store.arrTotalCPH[i]} cookies.`;
+    liEl.textContent = `${operationHours[i]}: ${store.arrTotalCPH[i]} cookies. Grand Total: ${answer}`;
     console.log('test:', store.variable);
     store.variable.appendChild(liEl);
   }
 };
+
+/*
+var vals = [5, 4, 1, 2, 9];
+var sum = function(acc, val) {
+  console.log('test acc: ', acc);
+  return acc + val;
+};
+var answer = vals.reduce(sum);
+console.log('TEST REDUCE: ', answer);
+*/
 ///// Constructor Function
 var CookieStand = function (variable, location, minCust, maxCust, avgCookieSale, arrTotalCPH, numCookieSold, totalSoldPerHour) {
   this.variable = variable;
