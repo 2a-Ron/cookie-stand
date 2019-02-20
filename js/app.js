@@ -32,16 +32,6 @@ var calcRender = function(store) {
     store.variable.appendChild(liEl);
   }
 };
-
-/*
-var vals = [5, 4, 1, 2, 9];
-var sum = function(acc, val) {
-  console.log('test acc: ', acc);
-  return acc + val;
-};
-var answer = vals.reduce(sum);
-console.log('TEST REDUCE: ', answer);
-*/
 ///// Constructor Function
 var CookieStand = function (variable, location, minCust, maxCust, avgCookieSale, arrTotalCPH, numCookieSold, totalSoldPerHour) {
   this.variable = variable;
