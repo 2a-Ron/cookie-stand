@@ -32,6 +32,30 @@ var calcRender = function(store) {
     store.variable.appendChild(liEl);
   }
 };
+/*
+function makeHeaderRow() {
+	var trEl = document.createElement('tr');
+	var thEl = document.createElement('th');
+	thEl.textContent = 'Locations';
+	trEl.appendChild(thEl);
+	for (var i = 0; i < operationHours.length; i++) {
+		thEl = document.createElement('th');
+		thEl.textContent = operationsHours[i];
+		trEl.appendChild(thEl);
+	}
+	thEl = document.createElement('th');
+	thEl.textContent = 'Location Grand Totals';
+	trEl.appendChild(thEl);
+	theTable.appendChild(trEl);
+};
+
+function renderTable() {
+	makeHeaderRow();
+	for (var i = 0; i < allShops.length; i++) {
+		allShops[i]????
+	}
+
+})();*/
 ///// Constructor Function
 var CookieStand = function (variable, location, minCust, maxCust, avgCookieSale, arrTotalCPH, numCookieSold, totalSoldPerHour) {
   this.variable = variable;
