@@ -7,7 +7,7 @@ html, body {
     width: 100%;
     height:100%;
     background-color: #999999;
-    font-family: Geneva, Arial, Helvetica, san-serif; /*revisit these styles*/
+    font-family: Arial, Helvetica, san-serif; /*revisit these styles*/
     font-display: auto;
     color: #ffffff;
   }
@@ -58,33 +58,37 @@ html, body {
 		text-align: center;
 	}
 
-  .mainTable {
-    border-style: solid;
-    border-color : #ffffff;
-    border-width: 2px;
+	th {
+		background-color: #e5cc87;
+		border-style: solid;
+		border-width: 2px;
+		border-color: #ffffff;
+		padding: 10px;
+		margin: 2px;
+		margin-left: auto;
+		margin-right: auto;
+		font-family: Arial, Helvetica, san-serif; /*revisit these styles*/
+    font-display: auto;
+    color: #000000;
+		justify-content: center;
+		align-content: center;
+		text-align: center;
 	}
 
-	#shell, th, tr, td {
+	#shell, td {
 		background-color: #d86f0d;
 		border-style: solid;
 		border-width: 2px;
 		border-color: #ffffff;
 		padding: 10px;
 		margin: 2px;
-
-	
 		margin-left: auto;
 		margin-right: auto;
+		font-family: Arial, Helvetica, san-serif; /*revisit these styles*/
+    font-display: auto;
+    color: #ffffff;
 		justify-content: center;
 		align-content: center;
 		text-align: center;
 	}
-/*
-	th, tr, td {
-		border-style: solid;
-		border-width: 2px;
-		border-color: #ffffff;
-		padding: 10px;
-		margin: 2px;
-	}
-  */
+	
