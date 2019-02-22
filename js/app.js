@@ -1,6 +1,7 @@
 'use strict';
 
 var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
+var allShops = [];
 var theTable = document.getElementById('shell');
 
 function CookieStand(locationName, minCustomersPerHour, maxCustomersPerHour, avgCookiesPerSale, id) {
@@ -25,6 +26,7 @@ function CookieStand(locationName, minCustomersPerHour, maxCustomersPerHour, avg
       this.totalDailyCookies += oneHour;
     }
   };
+  allShops.push(this);
 }
 
 CookieStand.prototype.render = function() {
@@ -70,18 +72,41 @@ function makeHeaderRow() {
   trEl.appendChild(thEl);
   theTable.appendChild(trEl);
 }
+function makeFooterRow() {
+  var trEl = document.createElement('tr');
 
-var pikePlace = new CookieStand('Pike Place Market', 23, 65, 6.3, 'pike');
-var seatacAirport = new CookieStand('Seatac Airport', 3, 24, 1.2, 'seatac');
-var seattleCenter = new CookieStand('Seattle Center', 11, 38, 3.7, 'seattlecenter');
-var capitolHill = new CookieStand('Capitol Hill', 20, 38, 2.3, 'caphill');
-var alki = new CookieStand('Alki', 2, 16, 4.6, 'alki');
+  var thEl = document.createElement('th');
+  thEl.textContent = 'Hourly Totals';
+  trEl.appendChild(thEl);
+  var thisDaysTotal = 0;
+  for(var i = 0; i < hours.length; i++) {
+    var thisHoursTotal = 0;
+    for (var j = 0; j < allShops.length; j++) {
+      thisHoursTotal = thisHoursTotal + allShops[j].cookiesEachHour[i];
+    }
+    thisDaysTotal = thisDaysTotal + thisHoursTotal;
+    thEl = document.createElement('th');
+    thEl.textContent = thisHoursTotal;
+    trEl.appendChild(thEl);
+  }
 
-var allShops = [pikePlace, seatacAirport, seattleCenter, capitolHill, alki];
+  thEl = document.createElement('th');
+  thEl.textContent = thisDaysTotal;
+  trEl.appendChild(thEl);
+  theTable.appendChild(trEl);
+}
+
+makeHeaderRow ();
+new CookieStand('Pike Place Market', 23, 65, 6.3, 'pike');
+new CookieStand('Seatac Airport', 3, 24, 1.2, 'seatac');
+new CookieStand('Seattle Center', 11, 38, 3.7, 'seattlecenter');
+new CookieStand('Capitol Hill', 20, 38, 2.3, 'caphill');
+new CookieStand('Alki', 2, 16, 4.6, 'alki');
 
 (function renderTable() {
-  makeHeaderRow();
   for(var i = 0; i < allShops.length; i++) {
     allShops[i].render();
   }
 })();
+makeFooterRow ();
+
