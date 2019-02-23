@@ -92,3 +92,15 @@ html, body {
 		text-align: center;
 	}
 	
+	#adminPanel {
+		border-style: none;
+		border-width: 2px;
+		border-color: #e5cc87;
+		padding: 10px;
+		margin: 2px;
+		margin-left: auto;
+		margin-right: auto;
+		justify-content: center;
+		align-content: center;
+		text-align: center;
+	}

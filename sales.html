@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+			<meta charset="UTF-8">
 			<title>Pat's Cookie Stand</title>
 			<link rel="stylesheet" href="css/reset.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -15,7 +16,35 @@
 						<h2>Calculate Daily Sales</h2>
 				</main>
 		</header>
-		<br>		
+		<br>
+		<!--form, fieldset, legend, label, input, label, input, button-->
+		<form id="adminPanel" action="" method="post">
+			<fieldset>
+				<legend>
+					Administrator Panel
+				</legend>
+				<label for="username">Username
+				<input type="text" id="username" name="login" size="15" maxlength="30" /></label>
+
+				<label for="password">Password
+				<input type="password" id="password" name="login" size="15" maxlength="30" /></label>
+
+				<button type="submit" onclick="getUserInfo()">Submit</button><br />				
+			</fieldset>
+			<fieldset id="manageCookieStands">
+				<legend>
+					Manage Cookie Stands
+				</legend>
+				<label for="">Object Info:
+				<input type="text" name="" /></label>
+
+				<label for="">Object Info:
+				<input type="text" name="" /></label>
+
+				<button type="submit">Submit</button>
+			</fieldset>
+		</form>
+
 		<table id="shell"></table>
 		
 		<script src="js/app.js"></script>
