@@ -74,7 +74,6 @@ function makeHeaderRow() {
 }
 function makeFooterRow() {
   var trEl = document.createElement('tr');
-
   var thEl = document.createElement('th');
   thEl.textContent = 'Hourly Totals';
   trEl.appendChild(thEl);
@@ -82,14 +81,13 @@ function makeFooterRow() {
   for(var i = 0; i < hours.length; i++) {
     var thisHoursTotal = 0;
     for (var j = 0; j < allShops.length; j++) {
-      thisHoursTotal = thisHoursTotal + allShops[j].cookiesEachHour[i];
+      thisHoursTotal += allShops[j].cookiesEachHour[i];
     }
-    thisDaysTotal = thisDaysTotal + thisHoursTotal;
+    thisDaysTotal += thisHoursTotal;
     thEl = document.createElement('th');
     thEl.textContent = thisHoursTotal;
     trEl.appendChild(thEl);
   }
-
   thEl = document.createElement('th');
   thEl.textContent = thisDaysTotal;
   trEl.appendChild(thEl);
@@ -111,8 +109,8 @@ new CookieStand('Alki', 2, 16, 4.6, 'alki');
 makeFooterRow ();
 
 ///////////////////// Admin Panel
-/*function showHide() {
-  if (???????????) {
+/*function showHide() { ???????????????????????????
+  if (document.getElementById('manageCookieStands').checked); {
     document.getElementById('manageCookieStands').style.display='none';
   } else {
     document.getElementById('manageCookieStands').style.display='block';
@@ -142,3 +140,30 @@ var getUserInfo = function() {
   }
   alert('Incorrect username or password');
 };
+
+var adminPanelInputForm = document.getElementById('adminPanel');
+var formProperties = [];
+
+function handleSubmitForm(event) {
+  event.preventDefault();
+  var formName = event.target.stand.value;
+  var formMin = event.target.mincph.value;
+  var formMax = event.target.maxcph.value;
+  var formAvgsold = event.target.avgsold.value;
+
+  var newStoreFormSubmit = new CookieStand (formName, parseInt(formMin), parseInt(formMax), parseInt(formAvgsold), adminPanelInputForm);
+  console.log(newStoreFormSubmit);
+  allShops.push(newStoreFormSubmit);
+  newStoreFormSubmit.render();//investigate this var name mine could be different...
+  console.log(allShops);
+  event.target.stand.value = null;
+  event.target.mincph.value = null;
+  event.target.maxcph.value = null;
+  event.target.avgsold.value = null;
+  formProperties.unshift(newStoreFormSubmit);
+};
+adminPanelInputForm.addEventListener('submit', handleSubmitForm);
+console.log(formProperties);
+
+
+
