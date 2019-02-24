@@ -74,6 +74,8 @@ function makeHeaderRow() {
 }
 function makeFooterRow() {
   var trEl = document.createElement('tr');
+  trEl.setAttribute('id', 'the-footer');
+  console.log(trEl);
   var thEl = document.createElement('th');
   thEl.textContent = 'Hourly Totals';
   trEl.appendChild(thEl);
@@ -89,6 +91,8 @@ function makeFooterRow() {
     trEl.appendChild(thEl);
   }
   thEl = document.createElement('th');
+  //thEl.setAttribute('id', 'the-footer');
+  //console.log(thEl);
   thEl.textContent = thisDaysTotal;
   trEl.appendChild(thEl);
   theTable.appendChild(trEl);
@@ -146,6 +150,7 @@ var formProperties = [];
 
 function handleSubmitForm(event) {
   event.preventDefault();
+  document.getElementById('the-footer').remove();
   var formName = event.target.stand.value;
   var formMin = event.target.mincph.value;
   var formMax = event.target.maxcph.value;
@@ -154,16 +159,18 @@ function handleSubmitForm(event) {
   var newStoreFormSubmit = new CookieStand (formName, parseInt(formMin), parseInt(formMax), parseInt(formAvgsold), adminPanelInputForm);
   console.log(newStoreFormSubmit);
   allShops.push(newStoreFormSubmit);
-  newStoreFormSubmit.render();//investigate this var name mine could be different...
+  newStoreFormSubmit.render();
   console.log(allShops);
   event.target.stand.value = null;
   event.target.mincph.value = null;
   event.target.maxcph.value = null;
   event.target.avgsold.value = null;
   formProperties.unshift(newStoreFormSubmit);
-};
+  makeFooterRow();
+}
 adminPanelInputForm.addEventListener('submit', handleSubmitForm);
 console.log(formProperties);
+
 
 
 
