@@ -53,15 +53,25 @@ ul li {
     display: inline-block;
     padding: 10px;
     margin-top: 10px;
-    margin-left: 330px;
-    margin-right: -250px;
+    margin-left: 268px;
+    margin-right: -261px;
     margin-bottom: 10px;
+    border: 3px;
+    border-style: solid;
+    border-color: #e5cc87;
     font-size: 18px;
     justify-content: center;
     align-content: center;
     text-align: center;
 }
-	
+
+section {
+    display: block;
+    width: 852px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .center {
     display: block;
     margin-left: auto;
@@ -71,3 +81,14 @@ ul li {
     text-align: center;
 }
 
+footer {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+    padding: 10px;
+    border: 3px;
+    border-style: solid;
+    border-color: #e5cc87;
+    text-align: center;
+}
