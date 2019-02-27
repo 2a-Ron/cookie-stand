@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -51,4 +52,73 @@
             The Footer | May Contain | a List of | Store Locations
         </footer>
     </body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Pat's Salmon Cookies</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/indexstylesheet.css">
+</head>
+  <body>
+    <header>
+      <section>
+        <img src="img/frosted-cookie.jpg" name="slide" width="200" height="70">
+          <nav>
+            <ul>
+              <li><a href="#">Nav Item 1</a></li>
+              <li><a href="#">Nav Item 2</a></li>
+              <li><a href="#">Nav Item 3</a></li>
+              <li><a href="#">Nav Item 4</a></li>
+            </ul>
+        </nav>
+      </section>
+    </header>
+    <main>
+      <img src="img/family.jpg" width="960" height="450" alt="family" title="The Salmon Cookie Family" />
+    
+      <ul class="sub-banners">
+        <li><img src="img/shirt.jpg"></li>
+        <li><img src="img/cutter.jpeg"></li>
+        <li><img src="img/frosted-cookie.jpg"></li>
+      </ul>
+    
+      <div class="clearfix"></div>
+      
+      <section class="left">
+        <img src="img/chinook.jpg">
+      </section>
+    
+      <section class="right">
+        <h2>featured heading</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat sapiente illum cumque officia velit nemo maxime quia consequuntur fuga soluta, excepturi repellat labore, perferendis tempore quaerat aliquam. Incidunt, ad reprehenderit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat sapiente illum cumque officia velit nemo maxime quia consequuntur fuga soluta, excepturi repellat labore, perferendis tempore quaerat aliquam. Incidunt, ad reprehenderit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat sapiente illum cumque officia velit nemo maxime quia consequuntur fuga soluta, excepturi repellat labore, perferendis tempore quaerat aliquam. Incidunt, ad reprehenderit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat sapiente illum cumque officia velit nemo maxime quia consequuntur fuga soluta, excepturi repellat labore, perferendis tempore quaerat aliquam. Incidunt, ad reprehenderit?</p>
+    
+        <button>call to action</button>
+      </section>
+    </main>
+    
+    <footer></footer>
+    <script>
+        var i = 0;
+        var slideTimer = 3000; // time represented in ms
+        var slideImgArr = [];
+
+        slideImgArr[0] = 'img/frosted-cookie.jpg';
+        slideImgArr[1] = 'img/chinook.jpg';
+        slideImgArr[2] = 'img/salmon.png';
+
+        function changeImg() {
+            document.slide.src = slideImgArr[i];
+            if (i < slideImgArr.length -1) {
+                i++;
+            } else {
+                i = 0;
+            }
+            setTimeout("changeImg()", slideTimer);
+        }
+        window.onload = changeImg();
+    </script>
+  </body>
 </html>
