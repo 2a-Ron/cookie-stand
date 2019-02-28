@@ -112,39 +112,6 @@ new CookieStand('Alki', 2, 16, 4.6, 'alki');
 })();
 makeFooterRow ();
 
-///////////////////// Admin Panel
-/*function showHide() { ???????????????????????????
-  if (document.getElementById('manageCookieStands').checked); {
-    document.getElementById('manageCookieStands').style.display='none';
-  } else {
-    document.getElementById('manageCookieStands').style.display='block';
-  }
-}
-*/
-var adminList = [
-  {
-    username: 'Admin',
-    password: 'Password'
-  },
-
-  {
-    username: 'Pat',
-    password: 'Cookie'
-  }
-];
-
-var getUserInfo = function() {
-  var username = document.getElementById('username').value;
-  var password = document.getElementById('password').value;
-
-  for(var i = 0; i < adminList.length; i++) {
-    if(username === adminList[i].username && password === adminList[i].password) {
-      return alert(`Welcome ${username}!`);/*window.open('sales.html', 'newwindow');*/ /*showHide();*/ // showHide() is a work in progress
-    }
-  }
-  alert('Incorrect username or password');
-};
-
 var adminPanelInputForm = document.getElementById('adminPanel');
 var formProperties = [];
 
