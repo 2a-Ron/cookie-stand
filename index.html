@@ -1,60 +1,3 @@
-<!--
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Pat's Cookie Stand</title>
-        <link rel="stylesheet" href="css/reset.css" />
-        <link rel="stylesheet" href="css/styleindex.css" />
-    </head>
-    <body>
-        <img src="img/salmon.png" alt="Pat's Cookie Stand" class="center" />
-        <header>
-            <h1>Pat's Salmon Cookies</h1>
-            <div>
-                <ul>
-                    <li><a href="#">Nav Item 1</a></li>
-                    <li><a href="#">Nav Item 2</a></li>
-                    <li><a href="#">Nav Item 3</a></li>
-                    <li><a href="#">Nav Item 4</a></li>
-                    <li><a href="#">Nav Item 5</a></li>
-                </ul>
-            </div>
-        </header>
-        <main>
-            <h1>
-                <img src="img/family.jpg" alt="family-photo" title="The Salmon Cookie Family" />
-            </h1>
-            <section>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis sem vulputate diam sodales hendrerit in quis eros. Fusce fringilla ex vel elit facilisis, pulvinar bibendum justo iaculis. Nulla nunc turpis, consectetur eu euismod nec, accumsan ut eros. Integer auctor accumsan nunc, sed tempus ex facilisis ac. Phasellus lacus libero, dapibus eget accumsan vitae, lobortis tincidunt erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi odio lacus, elementum ac malesuada accumsan, euismod sed est. Nam dictum fringilla semper. Aliquam commodo sapien ligula, id aliquam dolor dignissim ac. Aliquam rhoncus eget neque eget pulvinar. Pellentesque non semper dui. Mauris magna nisl, rutrum nec augue a, gravida cursus leo.
-                    <br />
-                    <br />
-                    Aenean non erat odio. Nulla eu ullamcorper leo. Duis volutpat, turpis ut condimentum interdum, erat metus eleifend magna, sed efficitur mauris eros tempor erat. Nulla eu lobortis magna. Sed in massa sit amet diam ultrices auctor ut nec orci. Sed consequat finibus eros, sed vulputate sapien auctor ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis enim erat. Cras vel quam ut ipsum aliquam laoreet posuere ut turpis. Cras dapibus faucibus orci, nec vulputate leo. Nunc eleifend auctor sem a pulvinar. Fusce consequat, turpis non eleifend condimentum, metus tellus mollis augue, et ornare libero nisi eu mauris.
-                    <br />
-                    <br />
-                    Donec vestibulum augue a sem pretium venenatis. Ut imperdiet nec risus vitae elementum. Morbi quis augue semper libero aliquet semper. Curabitur pulvinar purus quis turpis vehicula, et tempor risus rhoncus. Donec ut vestibulum magna. Donec non ultrices ipsum. Curabitur dapibus tortor quis augue tempor imperdiet. Quisque vitae hendrerit purus.
-                </p>
-            </section>
-            <section class="page-break">
-                <h3>CHECK OUT THE SALMON COOKIE GIFT SHOP</h3>
-            </section>
-            <section class="left">
-                <img src="img/shirt.jpg" alt="" title="" />
-            </section>      
-            <section class="right">
-                <p>
-                    Description about the item
-                </p>
-            </section>
-        </main>
-        <footer>
-            The Footer | May Contain | a List of | Store Locations
-        </footer>
-    </body>
-</html>
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,15 +6,15 @@
   <link rel="stylesheet" href="css/indexstylesheet.css">
 </head>
   <body>
-    <header>
+    <header id="top">
       <section>
         <img src="img/frosted-cookie.jpg" name="slide" width="200" height="70">
           <nav>
             <ul>
-              <li><a href="#">Nav Item 1</a></li>
-              <li><a href="#">Nav Item 2</a></li>
-              <li><a href="#">Nav Item 3</a></li>
-              <li><a href="#">Nav Item 4</a></li>
+              <li><a href="#bottom"><button>Locations</button></a></li>
+              <li><a href="#meet-the-fam"><button>About Us</button></a></li>
+              <li><a href="#merchandise"><button>Merchandise</button></a></li>
+              <li><a href="login.html" target="_blank"><button>Admin Panel</button></a></li>
             </ul>
         </nav>
       </section>
@@ -79,10 +22,10 @@
     <main>
       <img src="img/family.jpg" width="960" height="450" alt="family" title="The Salmon Cookie Family" />
     
-      <ul class="sub-banners">
+      <ul class="sub-banners" id="merchandise">
         <li><img src="img/shirt.jpg"></li>
         <li><img src="img/cutter.jpeg"></li>
-        <li><img src="img/frosted-cookie.jpg"></li>
+        <li><img src="img/frosted-cookie.jpg"></li>        
       </ul>
     
       <div class="clearfix"></div>
@@ -92,33 +35,18 @@
       </section>
     
       <section class="right">
-        <h2>featured heading</h2>
+        <h2 id="meet-the-fam">Meet The Salmon Cookie Family</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat sapiente illum cumque officia velit nemo maxime quia consequuntur fuga soluta, excepturi repellat labore, perferendis tempore quaerat aliquam. Incidunt, ad reprehenderit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat sapiente illum cumque officia velit nemo maxime quia consequuntur fuga soluta, excepturi repellat labore, perferendis tempore quaerat aliquam. Incidunt, ad reprehenderit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat sapiente illum cumque officia velit nemo maxime quia consequuntur fuga soluta, excepturi repellat labore, perferendis tempore quaerat aliquam. Incidunt, ad reprehenderit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat sapiente illum cumque officia velit nemo maxime quia consequuntur fuga soluta, excepturi repellat labore, perferendis tempore quaerat aliquam. Incidunt, ad reprehenderit?</p>
     
-        <button>call to action</button>
+        <a href="#top"><button>RETURN TO TOP</button></a>
       </section>
     </main>
     
-    <footer></footer>
-    <script>
-        var i = 0;
-        var slideTimer = 3000; // time represented in ms
-        var slideImgArr = [];
-
-        slideImgArr[0] = 'img/frosted-cookie.jpg';
-        slideImgArr[1] = 'img/chinook.jpg';
-        slideImgArr[2] = 'img/salmon.png';
-
-        function changeImg() {
-            document.slide.src = slideImgArr[i];
-            if (i < slideImgArr.length -1) {
-                i++;
-            } else {
-                i = 0;
-            }
-            setTimeout("changeImg()", slideTimer);
-        }
-        window.onload = changeImg();
-    </script>
+    <footer id="bottom">
+        <p>
+            1st and Pike | SeaTac Airport | Seattle Center | Capitol Hill | Alki Beach
+        </p>
+    </footer>
+    <script src="js/app-index.js"></script>
   </body>
 </html>
